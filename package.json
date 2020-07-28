@@ -1,0 +1,26 @@
+{
+  "name": "apidemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arunk2493/APIAutomationDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arunk2493/APIAutomationDemo/issues"
+  },
+  "homepage": "https://github.com/arunk2493/APIAutomationDemo#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "mocha": "^8.0.1",
+    "node-fetch": "^2.6.0",
+    "node-fetch-response-matchers": "^1.1.47"
+  }
+}
