@@ -77,14 +77,6 @@ describe("Node fetch Demo",function () {
 
         console.log(json);
     })
-    it("Sample Get CAll with input using Json - 3",async () => {
-
-        return expect(fetch('https://reqres.in/api/users?page=2')).to.haveBodyObject({ company: 'StatusCode Weekly',
-            url: 'http://statuscode.org/',
-            text:
-                'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.' })
-
-    })
     it("Sample Post CAll with input using Json - 1",async () => {
         const body1 = {
             name: "morpheus",
@@ -100,18 +92,23 @@ describe("Node fetch Demo",function () {
         console.log(json);
     })
     it("Sample Post CAll with input using Json - 2-assertionss",async () => {
-        const body1 = {
+        const body11 = {
             name: "morpheus",
             job: "leader"
         };
         const response = fetch(`https://reqres.in/api/users`, {
             method: 'POST',
-            body: JSON.stringify(body1),
+            body: JSON.stringify(body11),
             headers: {'Content-Type': 'application/json'}
-        });
-        expect(response).to.be.successful();
+        }).then();
+       await  expect(response).to.be.successful();
         console.log('----------------')
-        expect(response).to.haveBodyObject( {name: 'morpheus'});
+        await expect(response).to.haveBodyObject( {
+    name: "morpheus",
+    job: "leader",
+    id: "87",
+    createdAt: "2020-07-31T15:55:39.317Z"
+});
         console.log('After')
     })
 })

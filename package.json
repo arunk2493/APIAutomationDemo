@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require esm"
+    "test": "mocha --require esm --reporter mochawesome"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
     "mocha": "^8.0.1",
     "node-fetch": "^2.6.0",
     "node-fetch-response-matchers": "^1.1.47"
+  },
+  "devDependencies": {
+    "mochawesome": "^6.1.1"
   }
 }
