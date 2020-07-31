@@ -103,7 +103,7 @@ describe("Node fetch Demo",function () {
         }).then();
        await  expect(response).to.be.successful();
         console.log('----------------')
-        await expect(response).to.haveBodyObject( {
+        await expect(response).to.haveBodyText( {
     name: "morpheus",
     job: "leader",
     id: "87",
